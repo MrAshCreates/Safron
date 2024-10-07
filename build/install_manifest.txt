@@ -1,0 +1,14 @@
+/Users/mrashcreates/Developer/GitHub/Safron/build/_CPack_Packages/Darwin/TGZ/Safron-0.0.2-Darwin/bin/safron
+/Users/mrashcreates/Developer/GitHub/Safron/build/_CPack_Packages/Darwin/TGZ/Safron-0.0.2-Darwin/include/json.hpp
+/Users/mrashcreates/Developer/GitHub/Safron/build/_CPack_Packages/Darwin/TGZ/Safron-0.0.2-Darwin/include/build_manager.hpp
+/Users/mrashcreates/Developer/GitHub/Safron/build/_CPack_Packages/Darwin/TGZ/Safron-0.0.2-Darwin/include/config_manager.hpp
+/Users/mrashcreates/Developer/GitHub/Safron/build/_CPack_Packages/Darwin/TGZ/Safron-0.0.2-Darwin/include/admin_access.hpp
+/Users/mrashcreates/Developer/GitHub/Safron/build/_CPack_Packages/Darwin/TGZ/Safron-0.0.2-Darwin/include/CLI11.hpp
+/Users/mrashcreates/Developer/GitHub/Safron/build/_CPack_Packages/Darwin/TGZ/Safron-0.0.2-Darwin/include/package_manager.hpp
+/Users/mrashcreates/Developer/GitHub/Safron/build/_CPack_Packages/Darwin/TGZ/Safron-0.0.2-Darwin/src/package_manager.cpp
+/Users/mrashcreates/Developer/GitHub/Safron/build/_CPack_Packages/Darwin/TGZ/Safron-0.0.2-Darwin/src/config_manager.cpp
+/Users/mrashcreates/Developer/GitHub/Safron/build/_CPack_Packages/Darwin/TGZ/Safron-0.0.2-Darwin/src/build_manager.cpp
+/Users/mrashcreates/Developer/GitHub/Safron/build/_CPack_Packages/Darwin/TGZ/Safron-0.0.2-Darwin/src/admin_access.cpp
+/Users/mrashcreates/Developer/GitHub/Safron/build/_CPack_Packages/Darwin/TGZ/Safron-0.0.2-Darwin/src/main.cpp
+/Users/mrashcreates/Developer/GitHub/Safron/build/_CPack_Packages/Darwin/TGZ/Safron-0.0.2-Darwin/resources/default_config.json
+/Users/mrashcreates/Developer/GitHub/Safron/build/_CPack_Packages/Darwin/TGZ/Safron-0.0.2-Darwin/./CMakeLists.txt
