@@ -18,10 +18,20 @@ add_executable(safron
     src/build_manager.cpp
     src/admin_access.cpp
 )
-
+if(WIN32)
+    set(CURL_INCLUDE_DIRS "C:/Program Files/curl/include")
+    set(CURL_LIBRARIES "C:/Program Files/curl/lib/libcurl.lib")
+    include_directories(${CURL_INCLUDE_DIRS})
+    target_link_libraries(safron PRIVATE ${CURL_LIBRARIES})
+endif()
 # Find and link the CURL library
 find_package(CURL REQUIRED)
-target_link_libraries(safron PRIVATE CURL::libcurl)
+if(CURL_FOUND)
+    include_directories(${CURL_INCLUDE_DIRS})
+    target_link_libraries(safron PRIVATE ${CURL_LIBRARIES})
+else()
+    message(FATAL_ERROR "Could not find CURL library")
+endif()
 
 # Set the output directory
 set_target_properties(safron PROPERTIES
@@ -41,7 +51,7 @@ include(CPack)
 # Set package properties
 set(CPACK_PACKAGE_NAME "SafronCLI")
 set(CPACK_PACKAGE_VERSION "${PROJECT_VERSION}")
-set(CPACK_PACKAGE_CONTACT "MrAshCreates git@asherwinstead.devß")
+set(CPACK_PACKAGE_CONTACT "MrAshCreates git@asherwinstead.dev")
 set(CPACK_PACKAGE_DESCRIPTION_SUMMARY "Safron CLI Tool - A versatile package manager")
 
 # Specify the package generators
