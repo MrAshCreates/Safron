@@ -22,7 +22,7 @@ jobs:
 
       - name: Install Dependencies (macOS)
         if: runner.os == 'macOS'
-        run: brew install cmake curl
+        run: brew install --formula cmake curl
 
       - name: Install Dependencies (Windows)
         if: runner.os == 'Windows'
@@ -30,15 +30,14 @@ jobs:
 
       - name: Configure CMake
         run: |
-          mkdir build
+          mkdir -p build
           cd build
           cmake ..
 
       - name: Build
         run: |
-          mkdir -p build
           cd build
-          cmake ..
+          cmake --build .
 
       - name: Package
         run: |
@@ -49,4 +48,4 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: safron-${{ runner.os }}
-          path: build/*.tar.gz
+          path: build/*.{tar.gz,zip}
