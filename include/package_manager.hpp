@@ -30,6 +30,9 @@ private:
 
     void addPackageToConfig(const std::string& packageName);
     void removePackageFromConfig(const std::string& packageName);
+
+    // Helper functions
+    std::string sanitizeInput(const std::string& input);
 };
 
 #endif // PACKAGE_MANAGER_HPP
