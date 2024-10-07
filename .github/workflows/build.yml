@@ -43,12 +43,19 @@ jobs:
 
       - name: Configure CMake (Windows)
         if: runner.os == 'Windows'
-        shell: powershell
+        shell: pwsh
         run: |
           mkdir build
           cd build
           $env:VCPKG_ROOT = "$env:GITHUB_WORKSPACE\vcpkg"
-          cmake .. -DCMAKE_TOOLCHAIN_FILE=$env:VCPKG_ROOT\scripts\buildsystems\vcpkg.cmake
+          Write-Host "VCPKG_ROOT is $env:VCPKG_ROOT"
+          $toolchainFile = Join-Path $env:VCPKG_ROOT 'scripts\buildsystems\vcpkg.cmake'
+          if (Test-Path $toolchainFile) {
+              Write-Host "Toolchain file found at $toolchainFile"
+          } else {
+              Write-Error "Toolchain file not found at $toolchainFile"
+          }
+          cmake .. -DCMAKE_TOOLCHAIN_FILE="$toolchainFile"
 
       - name: Build (Linux and macOS)
         if: runner.os != 'Windows'
