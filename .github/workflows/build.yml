@@ -1,0 +1,51 @@
+name: Build and Package SafronCLI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-latest, windows-latest]
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Install Dependencies (Linux)
+        if: runner.os == 'Linux'
+        run: sudo apt-get update && sudo apt-get install -y libcurl4-openssl-dev
+
+      - name: Install Dependencies (macOS)
+        if: runner.os == 'macOS'
+        run: brew install cmake curl
+
+      - name: Install Dependencies (Windows)
+        if: runner.os == 'Windows'
+        run: choco install -y cmake curl
+
+      - name: Configure CMake
+        run: |
+          mkdir build
+          cd build
+          cmake ..
+
+      - name: Build
+        run: |
+          cd build
+          cmake --build .
+
+      - name: Package
+        run: |
+          cd build
+          cpack
+
+      - name: Upload Artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: safron-${{ runner.os }}
+          path: build/*.tar.gz
