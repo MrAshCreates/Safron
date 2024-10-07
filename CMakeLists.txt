@@ -50,7 +50,7 @@ set(CPACK_PACKAGE_CONTACT "MrAshCreates git@asherwinstead.dev")
 set(CPACK_PACKAGE_DESCRIPTION_SUMMARY "Safron CLI Tool - A versatile package manager")
 
 # Specify the package generators
-set(CPACK_GENERATOR "TGZ;ZIP;NSIS")
+set(CPACK_GENERATOR "TGZ;ZIP")
 
 # Exclude build and VCS directories from the package
 set(CPACK_SOURCE_IGNORE_FILES
