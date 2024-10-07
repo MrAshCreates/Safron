@@ -21,9 +21,41 @@ static size_t WriteCallback(void* contents, size_t size, size_t nmemb, void* use
 
 PackageManager::PackageManager(ConfigManager& configManager) : configManager(configManager) {}
 
-void PackageManager::installPackages(const std::vector<std::string>& packages) {
-    for (const auto& package : packages) {
-        installPackage(package);
+void PackageManager::installPackage(const std::string& package) {
+    std::string sanitizedPackage = sanitizeInput(package);
+    std::cout << "Installing package: " << sanitizedPackage << std::endl;
+
+    if (isGitUrl(sanitizedPackage)) {
+        // Handle Git repository
+        if (!downloadAndInstallRelease(sanitizedPackage)) {
+            if (!cloneAndBuildRepo(sanitizedPackage)) {
+                std::cerr << "Failed to install package from Git repository: " << sanitizedPackage << std::endl;
+                return;
+            }
+        }
+        addPackageToConfig(sanitizedPackage);
+    } else {
+        // Install via system package manager
+        bool success = false;
+#ifdef __APPLE__
+        std::vector<std::string> command = {"brew", "install", sanitizedPackage};
+        success = AdminAccess::executeCommand(command);
+#elif __linux__
+        std::vector<std::string> command = {"sudo", "apt-get", "install", "-y", sanitizedPackage};
+        success = AdminAccess::executeCommand(command);
+#elif _WIN32
+        std::vector<std::string> command = {"choco", "install", sanitizedPackage, "-y"};
+        success = AdminAccess::executeCommand(command);
+#else
+        std::cerr << "Unsupported OS for package installation." << std::endl;
+        return;
+#endif
+        if (success) {
+            std::cout << "Package installed successfully." << std::endl;
+            addPackageToConfig(sanitizedPackage);
+        } else {
+            std::cerr << "Package installation failed." << std::endl;
+        }
     }
 }
 

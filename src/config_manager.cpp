@@ -9,7 +9,31 @@
 namespace fs = std::filesystem;
 
 ConfigManager::ConfigManager() {
-    configPath = std::string(getenv("HOME")) + "/.safron/config.json";
+    std::string homeDir;
+
+#ifdef _WIN32
+    char* buf = nullptr;
+    size_t sz = 0;
+    if (_dupenv_s(&buf, &sz, "USERPROFILE") == 0 && buf != nullptr) {
+        homeDir = buf;
+        free(buf);
+    } else {
+        std::cerr << "Failed to get USERPROFILE environment variable." << std::endl;
+        // Handle error or set a default path
+        homeDir = "C:\\Users\\Default";
+    }
+#else
+    const char* envHome = std::getenv("HOME");
+    if (envHome) {
+        homeDir = envHome;
+    } else {
+        std::cerr << "Failed to get HOME environment variable." << std::endl;
+        // Handle error or set a default path
+        homeDir = "/home";
+    }
+#endif
+
+    configPath = homeDir + "/.safron/config.json";
 }
 
 bool ConfigManager::loadConfig() {
@@ -84,9 +108,16 @@ nlohmann::json ConfigManager::getConfig() const {
 }
 
 void ConfigManager::createDefaultConfig() {
+    std::string installDir;
+#ifdef _WIN32
+    installDir = "C:\\Program Files\\Safron";
+#else
+    installDir = "/usr/local/bin";
+#endif
+
     config = {
         {"auto_update", true},
-        {"install_directory", "/usr/local/bin"},
+        {"install_directory", installDir},
         {"installed_packages", nlohmann::json::array()}
     };
     // Ensure the directory exists
