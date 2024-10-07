@@ -194,6 +194,78 @@ safron/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/safron.dir/build.make CMakeFiles/safron.dir/build
 .PHONY : safron/fast
 
+src/admin_access.o: src/admin_access.cpp.o
+.PHONY : src/admin_access.o
+
+# target to build an object file
+src/admin_access.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/safron.dir/build.make CMakeFiles/safron.dir/src/admin_access.cpp.o
+.PHONY : src/admin_access.cpp.o
+
+src/admin_access.i: src/admin_access.cpp.i
+.PHONY : src/admin_access.i
+
+# target to preprocess a source file
+src/admin_access.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/safron.dir/build.make CMakeFiles/safron.dir/src/admin_access.cpp.i
+.PHONY : src/admin_access.cpp.i
+
+src/admin_access.s: src/admin_access.cpp.s
+.PHONY : src/admin_access.s
+
+# target to generate assembly for a file
+src/admin_access.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/safron.dir/build.make CMakeFiles/safron.dir/src/admin_access.cpp.s
+.PHONY : src/admin_access.cpp.s
+
+src/build_manager.o: src/build_manager.cpp.o
+.PHONY : src/build_manager.o
+
+# target to build an object file
+src/build_manager.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/safron.dir/build.make CMakeFiles/safron.dir/src/build_manager.cpp.o
+.PHONY : src/build_manager.cpp.o
+
+src/build_manager.i: src/build_manager.cpp.i
+.PHONY : src/build_manager.i
+
+# target to preprocess a source file
+src/build_manager.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/safron.dir/build.make CMakeFiles/safron.dir/src/build_manager.cpp.i
+.PHONY : src/build_manager.cpp.i
+
+src/build_manager.s: src/build_manager.cpp.s
+.PHONY : src/build_manager.s
+
+# target to generate assembly for a file
+src/build_manager.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/safron.dir/build.make CMakeFiles/safron.dir/src/build_manager.cpp.s
+.PHONY : src/build_manager.cpp.s
+
+src/config_manager.o: src/config_manager.cpp.o
+.PHONY : src/config_manager.o
+
+# target to build an object file
+src/config_manager.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/safron.dir/build.make CMakeFiles/safron.dir/src/config_manager.cpp.o
+.PHONY : src/config_manager.cpp.o
+
+src/config_manager.i: src/config_manager.cpp.i
+.PHONY : src/config_manager.i
+
+# target to preprocess a source file
+src/config_manager.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/safron.dir/build.make CMakeFiles/safron.dir/src/config_manager.cpp.i
+.PHONY : src/config_manager.cpp.i
+
+src/config_manager.s: src/config_manager.cpp.s
+.PHONY : src/config_manager.s
+
+# target to generate assembly for a file
+src/config_manager.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/safron.dir/build.make CMakeFiles/safron.dir/src/config_manager.cpp.s
+.PHONY : src/config_manager.cpp.s
+
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
 
@@ -218,6 +290,30 @@ src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/safron.dir/build.make CMakeFiles/safron.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
+src/package_manager.o: src/package_manager.cpp.o
+.PHONY : src/package_manager.o
+
+# target to build an object file
+src/package_manager.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/safron.dir/build.make CMakeFiles/safron.dir/src/package_manager.cpp.o
+.PHONY : src/package_manager.cpp.o
+
+src/package_manager.i: src/package_manager.cpp.i
+.PHONY : src/package_manager.i
+
+# target to preprocess a source file
+src/package_manager.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/safron.dir/build.make CMakeFiles/safron.dir/src/package_manager.cpp.i
+.PHONY : src/package_manager.cpp.i
+
+src/package_manager.s: src/package_manager.cpp.s
+.PHONY : src/package_manager.s
+
+# target to generate assembly for a file
+src/package_manager.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/safron.dir/build.make CMakeFiles/safron.dir/src/package_manager.cpp.s
+.PHONY : src/package_manager.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -233,9 +329,21 @@ help:
 	@echo "... package_source"
 	@echo "... rebuild_cache"
 	@echo "... safron"
+	@echo "... src/admin_access.o"
+	@echo "... src/admin_access.i"
+	@echo "... src/admin_access.s"
+	@echo "... src/build_manager.o"
+	@echo "... src/build_manager.i"
+	@echo "... src/build_manager.s"
+	@echo "... src/config_manager.o"
+	@echo "... src/config_manager.i"
+	@echo "... src/config_manager.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/package_manager.o"
+	@echo "... src/package_manager.i"
+	@echo "... src/package_manager.s"
 .PHONY : help
 
 

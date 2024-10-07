@@ -83,17 +83,81 @@ CMakeFiles/safron.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/safron.dir/src/main.cpp.s"
 	/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/mrashcreates/Developer/safron-cli/src/main.cpp -o CMakeFiles/safron.dir/src/main.cpp.s
 
+CMakeFiles/safron.dir/src/config_manager.cpp.o: CMakeFiles/safron.dir/flags.make
+CMakeFiles/safron.dir/src/config_manager.cpp.o: /Users/mrashcreates/Developer/safron-cli/src/config_manager.cpp
+CMakeFiles/safron.dir/src/config_manager.cpp.o: CMakeFiles/safron.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/mrashcreates/Developer/safron-cli/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/safron.dir/src/config_manager.cpp.o"
+	/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/safron.dir/src/config_manager.cpp.o -MF CMakeFiles/safron.dir/src/config_manager.cpp.o.d -o CMakeFiles/safron.dir/src/config_manager.cpp.o -c /Users/mrashcreates/Developer/safron-cli/src/config_manager.cpp
+
+CMakeFiles/safron.dir/src/config_manager.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/safron.dir/src/config_manager.cpp.i"
+	/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/mrashcreates/Developer/safron-cli/src/config_manager.cpp > CMakeFiles/safron.dir/src/config_manager.cpp.i
+
+CMakeFiles/safron.dir/src/config_manager.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/safron.dir/src/config_manager.cpp.s"
+	/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/mrashcreates/Developer/safron-cli/src/config_manager.cpp -o CMakeFiles/safron.dir/src/config_manager.cpp.s
+
+CMakeFiles/safron.dir/src/package_manager.cpp.o: CMakeFiles/safron.dir/flags.make
+CMakeFiles/safron.dir/src/package_manager.cpp.o: /Users/mrashcreates/Developer/safron-cli/src/package_manager.cpp
+CMakeFiles/safron.dir/src/package_manager.cpp.o: CMakeFiles/safron.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/mrashcreates/Developer/safron-cli/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/safron.dir/src/package_manager.cpp.o"
+	/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/safron.dir/src/package_manager.cpp.o -MF CMakeFiles/safron.dir/src/package_manager.cpp.o.d -o CMakeFiles/safron.dir/src/package_manager.cpp.o -c /Users/mrashcreates/Developer/safron-cli/src/package_manager.cpp
+
+CMakeFiles/safron.dir/src/package_manager.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/safron.dir/src/package_manager.cpp.i"
+	/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/mrashcreates/Developer/safron-cli/src/package_manager.cpp > CMakeFiles/safron.dir/src/package_manager.cpp.i
+
+CMakeFiles/safron.dir/src/package_manager.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/safron.dir/src/package_manager.cpp.s"
+	/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/mrashcreates/Developer/safron-cli/src/package_manager.cpp -o CMakeFiles/safron.dir/src/package_manager.cpp.s
+
+CMakeFiles/safron.dir/src/build_manager.cpp.o: CMakeFiles/safron.dir/flags.make
+CMakeFiles/safron.dir/src/build_manager.cpp.o: /Users/mrashcreates/Developer/safron-cli/src/build_manager.cpp
+CMakeFiles/safron.dir/src/build_manager.cpp.o: CMakeFiles/safron.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/mrashcreates/Developer/safron-cli/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/safron.dir/src/build_manager.cpp.o"
+	/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/safron.dir/src/build_manager.cpp.o -MF CMakeFiles/safron.dir/src/build_manager.cpp.o.d -o CMakeFiles/safron.dir/src/build_manager.cpp.o -c /Users/mrashcreates/Developer/safron-cli/src/build_manager.cpp
+
+CMakeFiles/safron.dir/src/build_manager.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/safron.dir/src/build_manager.cpp.i"
+	/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/mrashcreates/Developer/safron-cli/src/build_manager.cpp > CMakeFiles/safron.dir/src/build_manager.cpp.i
+
+CMakeFiles/safron.dir/src/build_manager.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/safron.dir/src/build_manager.cpp.s"
+	/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/mrashcreates/Developer/safron-cli/src/build_manager.cpp -o CMakeFiles/safron.dir/src/build_manager.cpp.s
+
+CMakeFiles/safron.dir/src/admin_access.cpp.o: CMakeFiles/safron.dir/flags.make
+CMakeFiles/safron.dir/src/admin_access.cpp.o: /Users/mrashcreates/Developer/safron-cli/src/admin_access.cpp
+CMakeFiles/safron.dir/src/admin_access.cpp.o: CMakeFiles/safron.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/mrashcreates/Developer/safron-cli/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/safron.dir/src/admin_access.cpp.o"
+	/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/safron.dir/src/admin_access.cpp.o -MF CMakeFiles/safron.dir/src/admin_access.cpp.o.d -o CMakeFiles/safron.dir/src/admin_access.cpp.o -c /Users/mrashcreates/Developer/safron-cli/src/admin_access.cpp
+
+CMakeFiles/safron.dir/src/admin_access.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/safron.dir/src/admin_access.cpp.i"
+	/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/mrashcreates/Developer/safron-cli/src/admin_access.cpp > CMakeFiles/safron.dir/src/admin_access.cpp.i
+
+CMakeFiles/safron.dir/src/admin_access.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/safron.dir/src/admin_access.cpp.s"
+	/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/mrashcreates/Developer/safron-cli/src/admin_access.cpp -o CMakeFiles/safron.dir/src/admin_access.cpp.s
+
 # Object files for target safron
 safron_OBJECTS = \
-"CMakeFiles/safron.dir/src/main.cpp.o"
+"CMakeFiles/safron.dir/src/main.cpp.o" \
+"CMakeFiles/safron.dir/src/config_manager.cpp.o" \
+"CMakeFiles/safron.dir/src/package_manager.cpp.o" \
+"CMakeFiles/safron.dir/src/build_manager.cpp.o" \
+"CMakeFiles/safron.dir/src/admin_access.cpp.o"
 
 # External object files for target safron
 safron_EXTERNAL_OBJECTS =
 
 bin/safron: CMakeFiles/safron.dir/src/main.cpp.o
+bin/safron: CMakeFiles/safron.dir/src/config_manager.cpp.o
+bin/safron: CMakeFiles/safron.dir/src/package_manager.cpp.o
+bin/safron: CMakeFiles/safron.dir/src/build_manager.cpp.o
+bin/safron: CMakeFiles/safron.dir/src/admin_access.cpp.o
 bin/safron: CMakeFiles/safron.dir/build.make
 bin/safron: CMakeFiles/safron.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/mrashcreates/Developer/safron-cli/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable bin/safron"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/mrashcreates/Developer/safron-cli/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable bin/safron"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/safron.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

@@ -8,7 +8,11 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/Users/mrashcreates/Developer/safron-cli/src/admin_access.cpp" "CMakeFiles/safron.dir/src/admin_access.cpp.o" "gcc" "CMakeFiles/safron.dir/src/admin_access.cpp.o.d"
+  "/Users/mrashcreates/Developer/safron-cli/src/build_manager.cpp" "CMakeFiles/safron.dir/src/build_manager.cpp.o" "gcc" "CMakeFiles/safron.dir/src/build_manager.cpp.o.d"
+  "/Users/mrashcreates/Developer/safron-cli/src/config_manager.cpp" "CMakeFiles/safron.dir/src/config_manager.cpp.o" "gcc" "CMakeFiles/safron.dir/src/config_manager.cpp.o.d"
   "/Users/mrashcreates/Developer/safron-cli/src/main.cpp" "CMakeFiles/safron.dir/src/main.cpp.o" "gcc" "CMakeFiles/safron.dir/src/main.cpp.o.d"
+  "/Users/mrashcreates/Developer/safron-cli/src/package_manager.cpp" "CMakeFiles/safron.dir/src/package_manager.cpp.o" "gcc" "CMakeFiles/safron.dir/src/package_manager.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.
