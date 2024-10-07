@@ -12,7 +12,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        os: [ubuntu-latest, macos-latest, windows-latest]
+        os: [ubuntu-latest, macos-latest]
     steps:
       - uses: actions/checkout@v3
 
@@ -24,15 +24,6 @@ jobs:
         if: runner.os == 'macOS'
         run: brew install --formula cmake curl
 
-      - name: Install Dependencies (Windows)
-        if: runner.os == 'Windows'
-        shell: powershell
-        run: |
-          choco install -y cmake git
-          git clone https://github.com/Microsoft/vcpkg.git
-          cd vcpkg
-          .\bootstrap-vcpkg.bat
-          .\vcpkg.exe install curl
 
       - name: Configure CMake (Linux and macOS)
         if: runner.os != 'Windows'
@@ -41,35 +32,11 @@ jobs:
           cd build
           cmake ..
 
-      - name: Configure CMake (Windows)
-        if: runner.os == 'Windows'
-        shell: pwsh
-        run: |
-          mkdir build
-          cd build
-          $env:VCPKG_ROOT = "$env:GITHUB_WORKSPACE\vcpkg"
-          Write-Host "VCPKG_ROOT is $env:VCPKG_ROOT"
-          $toolchainFile = Join-Path $env:VCPKG_ROOT 'scripts\buildsystems\vcpkg.cmake'
-          if (Test-Path $toolchainFile) {
-              Write-Host "Toolchain file found at $toolchainFile"
-          } else {
-              Write-Error "Toolchain file not found at $toolchainFile"
-          }
-          cmake .. -DCMAKE_TOOLCHAIN_FILE="$toolchainFile"
-
       - name: Build (Linux and macOS)
         if: runner.os != 'Windows'
         run: |
           cd build
           cmake --build .
-
-      - name: Build (Windows)
-        if: runner.os == 'Windows'
-        shell: powershell
-        run: |
-          cd build
-          cmake --build . --config Release
-
       - name: Package
         run: |
           cd build
@@ -79,4 +46,4 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: safron-${{ runner.os }}
-          path: build/*.{tar.gz,zip,msi}
+          path: build/*.{tar.gz,zip}
