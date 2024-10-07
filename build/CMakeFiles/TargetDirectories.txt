@@ -1,0 +1,9 @@
+/Users/mrashcreates/Developer/safron-cli/build/CMakeFiles/safron.dir
+/Users/mrashcreates/Developer/safron-cli/build/CMakeFiles/package.dir
+/Users/mrashcreates/Developer/safron-cli/build/CMakeFiles/package_source.dir
+/Users/mrashcreates/Developer/safron-cli/build/CMakeFiles/edit_cache.dir
+/Users/mrashcreates/Developer/safron-cli/build/CMakeFiles/rebuild_cache.dir
+/Users/mrashcreates/Developer/safron-cli/build/CMakeFiles/list_install_components.dir
+/Users/mrashcreates/Developer/safron-cli/build/CMakeFiles/install.dir
+/Users/mrashcreates/Developer/safron-cli/build/CMakeFiles/install/local.dir
+/Users/mrashcreates/Developer/safron-cli/build/CMakeFiles/install/strip.dir

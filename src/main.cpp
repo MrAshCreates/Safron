@@ -8,8 +8,8 @@
 #include <ctime>
 #include <algorithm>
 #include <vector>
-#include <nlohmann/json.hpp>
-#include "CLI/CLI.hpp"
+#include "json.hpp"
+#include "CLI11.hpp"
 
 using json = nlohmann::json;
 
@@ -152,7 +152,7 @@ void writeConfig(const json& config) {
         config_file << config.dump(4);
         config_file.close();
     } else {
-        std::cerr << "Failed to write config file." << std::endl;
+        std::cerr << "ERROR - Failed to write config file!" << std::endl;
     }
 }
 
