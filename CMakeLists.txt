@@ -20,13 +20,6 @@ add_executable(safron
 )
 
 # Find and link the CURL library
-if(WIN32)
-    set(CURL_INCLUDE_DIRS "C:/Program Files/curl/include")
-    set(CURL_LIBRARIES "C:/Program Files/curl/lib/libcurl.lib")
-    include_directories(${CURL_INCLUDE_DIRS})
-    target_link_libraries(safron PRIVATE ${CURL_LIBRARIES})
-endif()
-
 find_package(CURL REQUIRED)
 if(CURL_FOUND)
     include_directories(${CURL_INCLUDE_DIRS})
@@ -57,7 +50,7 @@ set(CPACK_PACKAGE_CONTACT "MrAshCreates git@asherwinstead.dev")
 set(CPACK_PACKAGE_DESCRIPTION_SUMMARY "Safron CLI Tool - A versatile package manager")
 
 # Specify the package generators
-set(CPACK_GENERATOR "TGZ;ZIP")
+set(CPACK_GENERATOR "TGZ;ZIP;NSIS")
 
 # Exclude build and VCS directories from the package
 set(CPACK_SOURCE_IGNORE_FILES
