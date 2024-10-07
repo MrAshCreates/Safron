@@ -18,13 +18,15 @@ add_executable(safron
     src/build_manager.cpp
     src/admin_access.cpp
 )
+
+# Find and link the CURL library
 if(WIN32)
     set(CURL_INCLUDE_DIRS "C:/Program Files/curl/include")
     set(CURL_LIBRARIES "C:/Program Files/curl/lib/libcurl.lib")
     include_directories(${CURL_INCLUDE_DIRS})
     target_link_libraries(safron PRIVATE ${CURL_LIBRARIES})
 endif()
-# Find and link the CURL library
+
 find_package(CURL REQUIRED)
 if(CURL_FOUND)
     include_directories(${CURL_INCLUDE_DIRS})
